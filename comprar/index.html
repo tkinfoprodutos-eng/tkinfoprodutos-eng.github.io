@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Recompõe 2033 · Calculadora da reforma tributária para quem vende ao governo</title>
+<meta name="description" content="Calcule o preço da proposta e o reequilíbrio dos seus contratos públicos com a CBS e o IBS, ano a ano até 2033. Compra única de R$ 29,90.">
+<meta property="og:title" content="Recompõe 2033 · Reforma tributária para quem vende ao governo">
+<meta property="og:description" content="Preço de proposta e reequilíbrio de contratos, ano a ano até 2033. Compra única de R$ 29,90.">
+<meta property="og:image" content="https://tkinfoprodutos-eng.github.io/img/capa.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Página de vendas: visual escuro único (mesma identidade da capa 3D) */
+:root{--bg:#04201e;--bg2:#073f3b;--card:#0b2f2c;--line:#1d4f4a;--ink:#eaf6f4;--muted:#9fc2bd;--brand:#8ff0e2;--brand-2:#0b5c57;--up:#ffb39e;--down:#7ee0a8;
+  --f-d:"Manrope",system-ui,sans-serif;--f-b:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;--f-m:"JetBrains Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-b);font-size:17px;line-height:1.55}
+.gut{padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.in{max-width:1120px;margin:0 auto}
+a{color:var(--brand)}
+h1,h2,h3{font-family:var(--f-d);letter-spacing:-.02em;text-wrap:balance;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--brand);color:#04201e;font-family:var(--f-d);font-weight:800;font-size:18px;
+  padding:16px 26px;border-radius:12px;text-decoration:none;box-shadow:0 10px 30px rgba(143,240,226,.25);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.note{color:var(--muted);font-size:14.5px}
+/* topo */
+.hero{background:radial-gradient(120% 90% at 75% 40%,#0f6b64 0%,#073f3b 45%,var(--bg) 100%);padding-block:22px 56px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-140px;height:320px;transform:perspective(600px) rotateX(68deg);transform-origin:50% 100%;
+  background-image:linear-gradient(rgba(143,240,226,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(143,240,226,.18) 1px,transparent 1px);background-size:44px 44px;
+  -webkit-mask-image:linear-gradient(to top,#000,transparent 85%);mask-image:linear-gradient(to top,#000,transparent 85%);pointer-events:none}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--f-d);font-weight:800;font-size:19px}
+.logo i{width:34px;height:34px;border-radius:9px;background:#fff;color:var(--brand-2);display:grid;place-items:center;font-style:normal}
+.bar a.ja{font-size:14.5px;color:var(--muted);text-decoration:none}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;margin-top:44px;position:relative;z-index:1}
+@media (max-width:880px){.hgrid{grid-template-columns:minmax(0,1fr);margin-top:28px}}
+.eyebrow{display:inline-block;font:700 12.5px var(--f-m);letter-spacing:.06em;text-transform:uppercase;color:var(--brand);border:1px solid rgba(143,240,226,.5);border-radius:999px;padding:5px 12px}
+.hero h1{font-size:clamp(32px,4.6vw,52px);line-height:1.06;margin-top:16px}
+.hero h1 span{color:var(--brand)}
+.hero p.lead{font-size:19px;color:#cfe7e3;margin:16px 0 26px;max-width:56ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.hero img{width:100%;max-width:520px;border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(143,240,226,.25);justify-self:center;transform:perspective(1200px) rotateY(-8deg) rotateX(3deg)}
+section{padding-block:64px}
+section h2{font-size:clamp(26px,3.4vw,38px);line-height:1.12}
+section p.sub{color:var(--muted);margin:10px 0 0;max-width:62ch}
+/* simulador */
+.sim{background:linear-gradient(180deg,var(--bg) 0%,#062c29 100%)}
+.simbox{margin-top:28px;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:22px}
+@media (max-width:880px){.simbox{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.panel label{display:block;font-weight:700;font-size:15px;margin-bottom:8px}
+.money{position:relative}
+.money span{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-family:var(--f-m);color:var(--muted)}
+.money input{width:100%;font:700 24px var(--f-m);color:var(--ink);background:#062724;border:1.5px solid var(--brand);border-radius:12px;padding:14px 14px 14px 52px}
+.money input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:6px}
+.seg button{font:700 14px var(--f-b);color:var(--muted);background:#062724;border:1px solid var(--line);border-radius:10px;padding:10px 4px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--brand);color:#04201e;border-color:var(--brand)}
+.seg button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.f{margin-top:18px}
+.big{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.big small{display:block;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.big b{display:block;font:700 26px var(--f-m);margin-top:4px}
+.big b.up{color:var(--up)}.big b.down{color:var(--down)}
+.chart{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:8px;align-items:end;height:260px;padding-top:30px}
+.col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px;min-width:0}
+.col .v{font:700 12px var(--f-m);white-space:nowrap}
+.col .v.up{color:var(--up)}.col .v.down{color:var(--down)}
+.col .b{width:100%;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,rgba(143,240,226,.55),rgba(143,240,226,.15));transition:height .35s}
+.col.last .b{background:linear-gradient(180deg,#8ff0e2,#3fb9a9);box-shadow:0 0 24px rgba(143,240,226,.45)}
+.col .y{font:600 12.5px var(--f-m);color:var(--muted)}
+.rows{margin-top:14px;display:grid;gap:6px;font-family:var(--f-m);font-size:14px}
+.rows div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding:4px 0}
+.rows div span:first-child{color:var(--muted)}
+.cenario{margin-top:14px;font-size:13.5px;color:var(--muted)}
+@media (max-width:520px){.chart{gap:4px;height:220px}.col .v{font-size:10px}}
+/* recursos */
+.cards{margin-top:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card .ic{font:700 13px var(--f-m);color:var(--brand);letter-spacing:.06em}
+.card h3{font-size:19px;margin:8px 0 6px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.who{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.who span{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:9px 16px;font-weight:600}
+/* preço */
+.price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:30px;align-items:center}
+@media (max-width:880px){.price{grid-template-columns:minmax(0,1fr)}}
+.pcard{background:linear-gradient(160deg,#0f6b64,#073f3b);border:1px solid rgba(143,240,226,.5);border-radius:20px;padding:28px;box-shadow:0 0 40px rgba(143,240,226,.18)}
+.pcard .val{font:800 52px var(--f-d);letter-spacing:-.03em}
+.pcard .val small{font-size:20px;font-weight:700;color:#cfe7e3}
+.pcard ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:8px}
+.pcard li::before{content:"✓ ";color:var(--brand);font-weight:800}
+.pcard .btn{width:100%}
+/* perguntas */
+details{border-bottom:1px solid var(--line);padding:16px 0}
+details summary{cursor:pointer;font-family:var(--f-d);font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--brand);font-family:var(--f-m)}
+details[open] summary::after{content:"−"}
+details p{margin:10px 0 0;color:#cfe7e3;max-width:72ch}
+summary:focus-visible{outline:3px solid var(--brand);outline-offset:4px}
+footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.sticky{position:fixed;left:0;right:0;bottom:0;padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));
+  background:rgba(4,32,30,.94);border-top:1px solid var(--line);display:none;z-index:5}
+.sticky .btn{width:100%;padding:13px;font-size:16.5px}
+@media (max-width:700px){.sticky{display:block}body{padding-bottom:76px}}
+</style>
+</head>
+<body>
+
+<header class="hero gut"><div class="in">
+  <div class="bar"><div class="logo"><i>R</i>Recompõe 2033</div><a class="ja" href="../">Já comprei · Entrar</a></div>
+  <div class="hgrid">
+    <div>
+      <span class="eyebrow">LC 214/2025 · CBS e IBS</span>
+      <h1>Quanto o seu contrato com o governo <span>vai precisar subir</span> até 2033?</h1>
+      <p class="lead">A reforma tributária muda a carga todo ano de 2027 a 2033. A Recompõe 2033 calcula o preço da sua proposta e o reequilíbrio dos contratos que você já tem, ano a ano, com a minuta pronta para pedir.</p>
+      <div class="cta-row"><a class="btn" href="https://pay.hotmart.com/B108084005G">Quero a calculadora · R$ 29,90</a>
+        <span class="note">Compra única · acesso imediato · garantia de 7 dias</span></div>
+    </div>
+    <img src="../img/capa.jpg" alt="A calculadora Recompõe 2033 no notebook e no celular, com o preço da proposta ano a ano até 2033" width="1200" height="1200">
+  </div>
+</div></header>
+
+<section class="sim gut" id="simulador"><div class="in">
+  <h2>Faça o teste com o seu contrato</h2>
+  <p class="sub">Digite o valor mensal e o regime da empresa. A conta abaixo usa o mesmo motor da calculadora, num cenário de exemplo.</p>
+  <div class="simbox">
+    <div class="panel">
+      <label for="v">Valor mensal do contrato</label>
+      <div class="money"><span>R$</span><input id="v" inputmode="decimal" value="100.000,00" aria-describedby="cen"></div>
+      <div class="f"><span style="font-weight:700;font-size:15px">Regime da empresa</span>
+        <div class="seg" role="group" aria-label="Regime da empresa">
+          <button type="button" data-r="presumido" aria-pressed="true">Presumido</button>
+          <button type="button" data-r="real" aria-pressed="false">Real</button>
+          <button type="button" data-r="simples" aria-pressed="false">Simples</button>
+        </div></div>
+      <div class="big"><small>Valor devido em 2033</small><b id="k33"></b><span class="note" id="k33s"></span></div>
+      <div class="big"><small id="totl">Sem reequilíbrio, de 2027 a 2033</small><b id="tot"></b></div>
+    </div>
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b style="font-family:var(--f-d)">Valor mensal que mantém a sua margem</b><span class="note">2026 = hoje</span></div>
+      <div class="chart" id="chart" role="img" aria-label="Variação do valor mensal por ano"></div>
+      <div class="rows" id="rows"></div>
+      <p class="cenario" id="cen">Cenário de exemplo: serviço prestado a órgão público, 55% de mão de obra e 20% de compras com crédito, CBS e IBS de referência de 26,5% e sem o redutor de compras governamentais. Na calculadora completa você ajusta cada um desses pontos, escolhe a área de atuação e calcula também o preço para licitação.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="gut"><div class="in">
+  <h2>O que você faz com a Recompõe 2033</h2>
+  <div class="cards">
+    <div class="card"><span class="ic">01 · PREGÃO</span><h3>Preço da proposta</h3><p>Informe custos e margem e veja o valor a ofertar em cada ano, com a CBS e o IBS destacados. Se já tem um valor em mente, veja a margem que ele deixa.</p></div>
+    <div class="card"><span class="ic">02 · CONTRATO</span><h3>Reequilíbrio ano a ano</h3><p>Quanto o contrato precisa subir em cada ano da vigência, o impacto acumulado e quando pedir, com base nos arts. 374 a 377.</p></div>
+    <div class="card"><span class="ic">03 · REDUTORES</span><h3>Reduções por área</h3><p>Saúde, educação, engenharia, advocacia, obras, locação e cesta básica: 30%, 50%, 60%, 70% ou alíquota zero, mais o redutor de compras governamentais.</p></div>
+    <div class="card"><span class="ic">04 · REGIMES</span><h3>Presumido, Real e Simples</h3><p>Considera os créditos de cada regime, o ISS ou o ICMS saindo de 2029 a 2032 e os tributos embutidos nas compras.</p></div>
+    <div class="card"><span class="ic">05 · DOCUMENTOS</span><h3>Minuta e nota prontas</h3><p>Texto do pedido de reequilíbrio e nota da proposta com cláusula de recomposição, prontos para copiar. Relatório para imprimir.</p></div>
+    <div class="card"><span class="ic">06 · CONTRATOS</span><h3>Seus cálculos salvos</h3><p>Guarde cada contrato e cada pregão, abra depois, duplique e atualize. Valores mensais ou anuais, como estiver na sua planilha.</p></div>
+  </div>
+  <div class="who" aria-label="Para quem é"><span>Fornecedores do governo</span><span>Assessorias de licitação</span><span>Analistas de licitação</span><span>Advogados</span><span>Contadores</span></div>
+</div></section>
+
+<section class="gut" style="background:#062c29"><div class="in price">
+  <div>
+    <h2>Uma compra, uso até 2033</h2>
+    <p class="sub">Sem mensalidade. Você compra uma vez e usa no computador e no celular, pelo navegador, sem instalar nada. Quando o Senado fixar as alíquotas e o governo publicar o redutor, é só ajustar os números na própria calculadora.</p>
+    <p class="sub">Um único pedido de reequilíbrio bem calculado vale muitas vezes o preço.</p>
+  </div>
+  <div class="pcard">
+    <div class="val">R$ 29,90 <small>à vista</small></div>
+    <div class="note" style="color:#cfe7e3">ou parcelado no cartão · Pix · boleto</div>
+    <ul><li>Preço da proposta e reequilíbrio</li><li>Redutores por área e do governo</li><li>Minuta do pedido e nota da proposta</li><li>Cálculos salvos e relatório</li><li>Garantia de 7 dias pelo Hotmart</li></ul>
+    <a class="btn" href="https://pay.hotmart.com/B108084005G">Comprar agora</a>
+  </div>
+</div></section>
+
+<section class="gut"><div class="in">
+  <h2>Perguntas frequentes</h2>
+  <div style="margin-top:14px">
+    <details><summary>Como recebo o acesso?</summary><p>Logo depois da confirmação do pagamento. Você entra em tkinfoprodutos-eng.github.io com o e-mail da compra e o código da transação (começa com HP), que está no e-mail do Hotmart.</p></details>
+    <details><summary>Serve para quem ainda não tem contrato?</summary><p>Sim. O modo Preço para licitação monta o valor da proposta a partir dos custos e da margem, ano a ano, e mostra a margem que o seu preço deixa em cada ano da execução.</p></details>
+    <details><summary>As alíquotas ainda não foram definidas. O cálculo serve?</summary><p>Serve para planejar e negociar. A calculadora vem com as alíquotas de referência usadas no mercado (26,5% e a estimativa de 27,91%) e você troca quando saírem os valores oficiais. O redutor de compras governamentais é uma régua que você ajusta.</p></details>
+    <details><summary>Funciona para o Simples Nacional?</summary><p>Sim. No Simples, a calculadora considera a alíquota efetiva do DAS e o efeito da reforma nas compras, que passam a ter CBS e IBS sem crédito.</p></details>
+    <details><summary>Substitui o contador?</summary><p>Não. É uma estimativa técnica para planejamento e para embasar pedidos, com base na Lei Complementar 214/2025. Confirme o enquadramento da sua empresa com o contador.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Peça o reembolso pelo Hotmart e o valor volta integralmente.</p></details>
+  </div>
+</div></section>
+
+<footer class="gut"><div class="in">
+  <p>Recompõe 2033 · Calculadora da reforma tributária para contratos públicos. Pagamento processado pelo Hotmart.</p>
+  <p>Estimativa para planejamento com base na LC 214/2025 e na EC 132/2023, que não substitui a análise do contador.</p>
+</div></footer>
+
+<div class="sticky"><a class="btn" href="https://pay.hotmart.com/B108084005G">Quero a calculadora · R$ 29,90</a></div>
+
+<script>
+// Fatores por ano (valor devido ÷ valor de hoje), calculados com o motor da Recompõe 2033 no cenário de exemplo descrito na página
+const F={presumido:[1,1.033202,1.033202,1.043082,1.053002,1.06296,1.072957,1.133693],real:[1,0.990428,0.990428,0.999851,1.009312,1.018809,1.028342,1.086256],simples:[1,1.009326,1.009326,1.0118,1.014286,1.016784,1.019293,1.034573]};
+const Y=[2026,2027,2028,2029,2030,2031,2032,2033];
+const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:2,maximumFractionDigits:2});
+const pct=v=>(v>0?'+':'')+(v*100).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
+const inp=document.getElementById('v');let reg='presumido';
+const ler=()=>{const n=parseFloat(String(inp.value).replace(/\./g,'').replace(',','.').replace(/[^\d.]/g,''));return isFinite(n)&&n>0?n:0};
+function draw(){const P=ler(),f=F[reg],mx=Math.max(...f),mn=Math.min(...f,1),span=Math.max(mx-mn,.02);
+  document.getElementById('chart').innerHTML=f.map((k,i)=>{const h=18+((k-mn)/span)*72,c=k>1.0005?'up':k<.9995?'down':'';
+    return `<div class="col ${i===7?'last':''}"><span class="v ${c}">${i?pct(k-1):'hoje'}</span><div class="b" style="height:${h}%"></div><span class="y">${String(Y[i]).slice(2)}</span></div>`}).join('');
+  document.getElementById('rows').innerHTML=[0,1,3,5,7].map(i=>`<div><span>${Y[i]}</span><span>${brl(P*f[i])}/mês</span></div>`).join('');
+  const k33=document.getElementById('k33');k33.textContent=brl(P*f[7])+'/mês';k33.className=f[7]>1?'up':'down';
+  document.getElementById('k33s').textContent=pct(f[7]-1)+' sobre hoje';
+  const tot=f.slice(1).reduce((a,k)=>a+(k-1)*P*12,0),t=document.getElementById('tot');
+  document.getElementById('totl').textContent=tot>=0?'Sem reequilíbrio, a empresa perde de 2027 a 2033':'O órgão pode pedir redução de 2027 a 2033';
+  t.textContent=brl(Math.abs(tot));t.className=tot>=0?'up':'down'}
+inp.addEventListener('input',draw);
+inp.addEventListener('blur',()=>{const P=ler();if(P)inp.value=P.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})});
+document.querySelectorAll('[data-r]').forEach(b=>b.addEventListener('click',()=>{reg=b.dataset.r;document.querySelectorAll('[data-r]').forEach(x=>x.setAttribute('aria-pressed',x===b));draw()}));
+draw();
+</script>
+</body>
+</html>
