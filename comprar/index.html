@@ -150,7 +150,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b style="font-family:var(--f-d)">Valor mensal que mantém a sua margem</b><span class="note">2026 = hoje</span></div>
       <div class="chart" id="chart" role="img" aria-label="Variação do valor mensal por ano"></div>
       <div class="rows" id="rows"></div>
-      <p class="cenario" id="cen">Cenário de exemplo: serviço prestado a órgão público, 55% de mão de obra e 20% de compras com crédito, CBS e IBS de referência de 26,5% e sem o redutor de compras governamentais. Na calculadora completa você ajusta cada um desses pontos, escolhe a área de atuação e calcula também o preço para licitação.</p>
+      <p class="cenario" id="cen">Cenário de exemplo: serviço prestado a órgão público, 55% de mão de obra e 20% de compras com crédito, CBS e IBS de referência de 27,91%, ISS sobre o valor com CBS e IBS e sem o redutor de compras governamentais. Na calculadora completa você ajusta cada um desses pontos, escolhe a área de atuação e calcula também o preço para licitação.</p>
     </div>
   </div>
 </div></section>
@@ -203,7 +203,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
 
 <script>
 // Fatores por ano (valor devido ÷ valor de hoje), calculados com o motor da Recompõe 2033 no cenário de exemplo descrito na página
-const F={presumido:[1,1.033202,1.033202,1.043082,1.053002,1.06296,1.072957,1.133693],real:[1,0.990428,0.990428,0.999851,1.009312,1.018809,1.028342,1.086256],simples:[1,1.009326,1.009326,1.0118,1.014286,1.016784,1.019293,1.034573]};
+const F={presumido:[1,1.041307,1.041307,1.052421,1.063392,1.074223,1.084917,1.146329],real:[1,0.998198,0.998198,1.008803,1.019271,1.029604,1.039805,1.098363],simples:[1,1.010158,1.010158,1.012836,1.015525,1.018225,1.020937,1.037435]};
 const Y=[2026,2027,2028,2029,2030,2031,2032,2033];
 const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:2,maximumFractionDigits:2});
 const pct=v=>(v>0?'+':'')+(v*100).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
