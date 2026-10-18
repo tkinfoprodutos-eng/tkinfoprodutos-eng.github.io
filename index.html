@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Recompõe 2033</title>
+<meta name="description" content="Calculadora da reforma tributária para quem vende ao governo: preço de proposta e reequilíbrio de contratos até 2033.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{--bg:#eef3f2;--surface:#fff;--ink:#0f2a2a;--muted:#587170;--line:#d5e0de;--brand:#0b5c57;--brand-ink:#fff;--brand-soft:#dcefec;--up:#c0472b;--up-soft:#fbe7e1;
+  --f-display:"Manrope",system-ui,sans-serif;--f-body:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;--f-mono:"JetBrains Mono",ui-monospace,monospace;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0a1716;--surface:#102321;--ink:#e4efed;--muted:#93aeab;--line:#21403d;--brand:#38b2a6;--brand-ink:#04211f;--brand-soft:#123b38;--up:#ff8a6b;--up-soft:#3b1d16;color-scheme:dark}}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.5;display:grid;place-items:center;min-height:100vh;
+  padding:24px max(16px,env(safe-area-inset-left,0px)) 24px max(16px,env(safe-area-inset-right,0px))}
+.box{width:100%;max-width:440px;display:grid;gap:18px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--f-display);font-weight:800;font-size:20px;color:var(--brand)}
+.logo i{width:34px;height:34px;border-radius:9px;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font-style:normal;font-size:15px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;display:grid;gap:16px;box-shadow:0 8px 28px rgba(15,42,42,.08)}
+h1{font-family:var(--f-display);font-size:22px;margin:0;line-height:1.2}
+p{margin:0}.muted{color:var(--muted);font-size:14px}
+label{font-weight:600;font-size:14px;display:grid;gap:6px}
+input{font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);width:100%}
+input#codigo{font-family:var(--f-mono);text-transform:uppercase}
+input:focus-visible,button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+button{font:inherit;font-weight:700;font-size:15px;padding:12px;border:0;border-radius:9px;background:var(--brand);color:var(--brand-ink);cursor:pointer}
+button[disabled]{opacity:.6;cursor:wait}
+.erro{background:var(--up-soft);color:var(--up);border-radius:9px;padding:10px 12px;font-size:14px;font-weight:600}
+details{font-size:14px;color:var(--muted)}
+details summary{cursor:pointer;font-weight:600;color:var(--ink)}
+details p{margin-top:8px}
+.foot{font-size:13px;color:var(--muted);text-align:center}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<p class="foot" id="carregando">Abrindo a calculadora...</p>
+<main class="box" id="caixa" hidden>
+  <div class="logo"><i>R</i>Recompõe 2033</div>
+  <form class="card" id="f" novalidate>
+    <div><h1>Entrar na calculadora</h1><p class="muted">Use os dados da sua compra no Hotmart.</p></div>
+    <label for="email">E-mail usado na compra<input type="email" id="email" autocomplete="email" required placeholder="voce@empresa.com.br"></label>
+    <label for="codigo">Código da compra<input type="text" id="codigo" autocomplete="off" required placeholder="HP0000000000"></label>
+    <p class="erro" id="erro" hidden></p>
+    <button type="submit" id="b">Entrar</button>
+    <details><summary>Onde encontro o código da compra?</summary>
+      <p>No e-mail de confirmação que o Hotmart enviou depois do pagamento. É o "código da transação", que começa com HP. Ele também aparece em hotmart.com, na área Minhas compras.</p>
+      <p>A compra no boleto ou no Pix libera o acesso assim que o pagamento é confirmado.</p></details>
+  </form>
+  <p class="foot">Ainda não tem acesso? Adquira a calculadora pelo Hotmart.</p>
+</main>
+<script>
+// Página pública (GitHub Pages). A calculadora fica no servidor e só vem depois do login.
+const API='https://recompoe2033.noronhaholandalicitacoes.workers.dev',KEY='recompoe2033.token';
+const ler=()=>{try{return localStorage.getItem(KEY)}catch(e){return null}};
+const gravar=t=>{try{t?localStorage.setItem(KEY,t):localStorage.removeItem(KEY)}catch(e){}};
+function mostrarEntrada(msg){document.getElementById('carregando').hidden=true;document.getElementById('caixa').hidden=false;
+  if(msg){er.textContent=msg;er.hidden=false}}
+async function abrir(token){
+  try{const r=await fetch(API+'/api/app',{headers:{authorization:'Bearer '+token}});
+    if(r.status===401){gravar(null);mostrarEntrada('Seu acesso expirou ou foi bloqueado. Entre de novo com os dados da compra.');return false}
+    if(!r.ok)throw 0;
+    const app=await r.text();
+    window.__R={api:API,token,sair(){gravar(null);location.reload()}};
+    document.open();document.write(app);document.close();return true}
+  catch(x){mostrarEntrada('Sem conexão com o servidor. Confira a internet e recarregue a página.');return false}}
+const f=document.getElementById('f'),b=document.getElementById('b'),er=document.getElementById('erro');
+f.addEventListener('submit',async e=>{e.preventDefault();er.hidden=true;
+  const email=document.getElementById('email').value.trim(),codigo=document.getElementById('codigo').value.trim();
+  if(!email||!codigo){er.textContent='Preencha o e-mail e o código da compra.';er.hidden=false;return}
+  b.disabled=true;b.textContent='Conferindo...';
+  try{const r=await fetch(API+'/api/login',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({email,codigo})});
+    const d=await r.json().catch(()=>({}));
+    if(r.ok&&d.ok&&d.token){gravar(d.token);if(await abrir(d.token))return}
+    else{
+    er.textContent=d.msg||'Não foi possível entrar agora. Tente de novo em instantes.';er.hidden=false}}
+  catch(x){er.textContent='Sem conexão com o servidor. Confira a internet e tente de novo.';er.hidden=false}
+  b.disabled=false;b.textContent='Entrar'});
+{const t=ler();if(t)abrir(t);else mostrarEntrada()}
+</script>
+</body>
+</html>
