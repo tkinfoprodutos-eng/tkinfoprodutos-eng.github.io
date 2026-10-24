@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Recompõe 2033 · Calculadora da reforma tributária para quem vende ao governo</title>
-<meta name="description" content="Calcule o preço da proposta e o reequilíbrio dos seus contratos públicos com a CBS e o IBS, ano a ano até 2033. Compra única de R$ 29,90.">
+<meta name="description" content="Calcule o preço da proposta e o reequilíbrio dos seus contratos públicos com a CBS e o IBS, ano a ano até 2033. Pagamento único de R$ 37,00.">
 <meta property="og:title" content="Recompõe 2033 · Reforma tributária para quem vende ao governo">
-<meta property="og:description" content="Preço de proposta e reequilíbrio de contratos, ano a ano até 2033. Compra única de R$ 29,90.">
+<meta property="og:description" content="Preço de proposta e reequilíbrio de contratos, ano a ano até 2033. Pagamento único de R$ 37,00.">
 <meta property="og:image" content="https://tkinfoprodutos-eng.github.io/img/capa.jpg">
 <script>
 // Pixel do Meta (mesmo da conta de anúncios): conta as visitas; o checkout do Hotmart conta o início da compra e a venda
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1818037596053231');fbq('track','PageView');fbq('track','ViewContent',{content_name:'Recompõe 2033',value:29.90,currency:'BRL'});
+fbq('init','1818037596053231');fbq('track','PageView');fbq('track','ViewContent',{content_name:'Recompõe 2033',value:37.00,currency:'BRL'});
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
@@ -112,19 +112,31 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
   background:rgba(4,32,30,.94);border-top:1px solid var(--line);display:none;z-index:5}
 .sticky .btn{width:100%;padding:13px;font-size:16.5px}
 @media (max-width:700px){.sticky{display:block}body{padding-bottom:76px}}
+/* faixa de prazo: a CBS começa em 01/01/2027 */
+.prazo{background:linear-gradient(90deg,#ffb020,#ffd166);color:#1a1200;font:700 15px var(--f-b);text-align:center;padding-block:9px}
+.prazo b{font-weight:800}
+/* brilho que passa no botão de compra */
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);animation:brilho 3.2s ease-in-out infinite}
+@keyframes brilho{0%,55%{left:-60%}100%{left:130%}}
+.selos{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:16px;font-size:14px;color:#cfe7e3}
+.selos span::before{content:"✓ ";color:var(--brand);font-weight:800}
+@media (prefers-reduced-motion:reduce){.btn::after{animation:none;display:none}}
 </style>
 </head>
 <body>
 
+<div class="prazo gut" id="prazo">⏰ A CBS começa a ser cobrada em 1º de janeiro de 2027<span id="faltam"></span></div>
 <header class="hero gut"><div class="in">
   <div class="bar"><div class="logo"><i>R</i>Recompõe 2033</div><a class="ja" href="../">Já comprei · Entrar</a></div>
   <div class="hgrid">
     <div>
-      <span class="eyebrow">LC 214/2025 · CBS e IBS</span>
-      <h1>Quanto o seu contrato com o governo <span>vai precisar subir</span> até 2033?</h1>
-      <p class="lead">A reforma tributária muda a carga todo ano de 2027 a 2033. A Recompõe 2033 calcula o preço da sua proposta e o reequilíbrio dos contratos que você já tem, ano a ano, com a minuta pronta para pedir.</p>
-      <div class="cta-row"><a class="btn" href="https://pay.hotmart.com/B108084005G">Quero a calculadora · R$ 29,90</a>
-        <span class="note">Compra única · sempre atualizada · garantia de 7 dias</span></div>
+      <span class="eyebrow">JANEIRO DE 2027 · A CBS COMEÇA</span>
+      <h1>Seu preço de pregão e o seu contrato <span>já estão com a CBS de 2027?</span></h1>
+      <p class="lead">Em janeiro de 2027 a CBS começa a ser cobrada, e a carga muda todo ano até 2033. Quem ganha um pregão agora executa o contrato já com ela. A Recompõe 2033 calcula o preço da sua proposta e o reequilíbrio dos contratos que você já tem, ano a ano, com a minuta pronta para pedir.</p>
+      <div class="cta-row"><a class="btn" href="https://pay.hotmart.com/B108084005G">Quero a calculadora · R$ 37</a>
+        <span class="note">Pagamento único · sem mensalidade</span></div>
+      <div class="selos"><span>Acesso na hora</span><span>Sempre atualizada</span><span>Garantia de 7 dias</span><span>Pagamento seguro Hotmart</span></div>
     </div>
     <img src="../img/capa.jpg" alt="A calculadora Recompõe 2033 no notebook e no celular, com o preço da proposta ano a ano até 2033" width="1200" height="1200">
   </div>
@@ -175,7 +187,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
     <p class="sub">Um único pedido de reequilíbrio bem calculado vale muitas vezes o preço.</p>
   </div>
   <div class="pcard">
-    <div class="val">R$ 29,90 <small>à vista</small></div>
+    <div class="val">R$ 37 <small>pagamento único</small></div>
     <div class="note" style="color:#cfe7e3">ou parcelado no cartão · Pix · boleto</div>
     <ul><li>Preço da proposta e reequilíbrio</li><li>Redutores por área e do governo</li><li>Minuta do pedido e nota da proposta</li><li>Cálculos salvos e relatório</li><li>Atualizações sempre incluídas, sem custo</li><li>Garantia de 7 dias pelo Hotmart</li></ul>
     <a class="btn" href="https://pay.hotmart.com/B108084005G">Comprar agora</a>
@@ -196,11 +208,11 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
 </div></section>
 
 <footer class="gut"><div class="in">
-  <p>Recompõe 2033 · Calculadora da reforma tributária para contratos públicos. Pagamento processado pelo Hotmart.</p>
+  <p>Recompõe 2033 · Calculadora da reforma tributária para contratos públicos · uma solução Licitante Pro. Pagamento seguro processado pelo Hotmart.</p>
   <p>Estimativa para planejamento com base na LC 214/2025 e na EC 132/2023, que não substitui a análise do contador.</p>
 </div></footer>
 
-<div class="sticky"><a class="btn" href="https://pay.hotmart.com/B108084005G">Quero a calculadora · R$ 29,90</a></div>
+<div class="sticky"><a class="btn" href="https://pay.hotmart.com/B108084005G">Quero a calculadora · R$ 37</a></div>
 
 <script>
 // Fatores por ano (valor devido ÷ valor de hoje), calculados com o motor da Recompõe 2033 no cenário de exemplo descrito na página
@@ -223,6 +235,9 @@ inp.addEventListener('input',draw);
 inp.addEventListener('blur',()=>{const P=ler();if(P)inp.value=P.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2})});
 document.querySelectorAll('[data-r]').forEach(b=>b.addEventListener('click',()=>{reg=b.dataset.r;document.querySelectorAll('[data-r]').forEach(x=>x.setAttribute('aria-pressed',x===b));draw()}));
 draw();
+// Contagem até 01/01/2027 (horário de Brasília); some depois da data
+(()=>{const d=Math.ceil((Date.parse('2027-01-01T00:00:00-03:00')-Date.now())/864e5);const s=document.getElementById('faltam');
+  if(d>1)s.innerHTML=' · faltam <b>'+d+' dias</b>';else if(d===1)s.innerHTML=' · falta <b>1 dia</b>';else document.getElementById('prazo').textContent='⏰ A CBS já está sendo cobrada desde 1º de janeiro de 2027';})();
 </script>
 </body>
 </html>
