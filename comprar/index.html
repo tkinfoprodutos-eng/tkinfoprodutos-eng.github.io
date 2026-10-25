@@ -126,14 +126,14 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
 </head>
 <body>
 
-<div class="prazo gut" id="prazo">⏰ A CBS começa a ser cobrada em 1º de janeiro de 2027<span id="faltam"></span></div>
+<div class="prazo gut" id="prazo">⏰ A reforma tributária começa a cobrar em 1º de janeiro de 2027<span id="faltam"></span></div>
 <header class="hero gut"><div class="in">
   <div class="bar"><div class="logo"><i>R</i>Recompõe 2033</div><a class="ja" href="../">Já comprei · Entrar</a></div>
   <div class="hgrid">
     <div>
-      <span class="eyebrow">JANEIRO DE 2027 · A CBS COMEÇA</span>
-      <h1>Seu preço de pregão e o seu contrato <span>já estão com a CBS de 2027?</span></h1>
-      <p class="lead">Em janeiro de 2027 a CBS começa a ser cobrada, e a carga muda todo ano até 2033. Quem ganha um pregão agora executa o contrato já com ela. A Recompõe 2033 calcula o preço da sua proposta e o reequilíbrio dos contratos que você já tem, ano a ano, com a minuta pronta para pedir.</p>
+      <span class="eyebrow">JANEIRO DE 2027 · A REFORMA TRIBUTÁRIA COMEÇA A COBRAR</span>
+      <h1>Seu preço de pregão e o seu contrato <span>já estão com a reforma tributária?</span></h1>
+      <p class="lead">Em janeiro de 2027 a reforma tributária começa a cobrar: a CBS entra no preço e a carga muda todo ano até 2033. Quem ganha um pregão agora executa o contrato já com ela. A Recompõe 2033 calcula o preço da sua proposta e o reequilíbrio dos contratos que você já tem, ano a ano, com a minuta pronta para pedir.</p>
       <div class="cta-row"><a class="btn" href="https://pay.hotmart.com/B108084005G">Quero a calculadora · R$ 37</a>
         <span class="note">Pagamento único · sem mensalidade</span></div>
       <div class="selos"><span>Acesso na hora</span><span>Sempre atualizada</span><span>Garantia de 7 dias</span><span>Pagamento seguro Hotmart</span></div>
@@ -237,7 +237,7 @@ document.querySelectorAll('[data-r]').forEach(b=>b.addEventListener('click',()=>
 draw();
 // Contagem até 01/01/2027 (horário de Brasília); some depois da data
 (()=>{const d=Math.ceil((Date.parse('2027-01-01T00:00:00-03:00')-Date.now())/864e5);const s=document.getElementById('faltam');
-  if(d>1)s.innerHTML=' · faltam <b>'+d+' dias</b>';else if(d===1)s.innerHTML=' · falta <b>1 dia</b>';else document.getElementById('prazo').textContent='⏰ A CBS já está sendo cobrada desde 1º de janeiro de 2027';})();
+  if(d>1)s.innerHTML=' · faltam <b>'+d+' dias</b>';else if(d===1)s.innerHTML=' · falta <b>1 dia</b>';else document.getElementById('prazo').textContent='⏰ A reforma tributária já está cobrando desde 1º de janeiro de 2027';})();
 </script>
 </body>
 </html>
