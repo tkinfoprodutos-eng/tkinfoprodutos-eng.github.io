@@ -17,7 +17,7 @@ fbq('init','964987196681187');fbq('track','PageView');fbq('track','ViewContent',
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
 /* Página de vendas: visual escuro único (mesma identidade da capa 3D) */
-:root{--bg:#04201e;--bg2:#073f3b;--card:#0b2f2c;--line:#1d4f4a;--ink:#eaf6f4;--muted:#9fc2bd;--brand:#8ff0e2;--brand-2:#0b5c57;--up:#ffb39e;--down:#7ee0a8;
+:root{--bg:#0b0b0b;--bg2:#161210;--card:#17130f;--line:#3a2a20;--ink:#f6f1ee;--muted:#c9b9ae;--brand:#ff6a2b;--brand-2:#f04e23;--up:#ffb39e;--down:#7ee0a8;
   --f-d:"Manrope",system-ui,sans-serif;--f-b:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;--f-m:"JetBrains Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
 *{box-sizing:border-box}
 html,body{margin:0}
@@ -26,15 +26,15 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f-b);font-size:17px
 .in{max-width:1120px;margin:0 auto}
 a{color:var(--brand)}
 h1,h2,h3{font-family:var(--f-d);letter-spacing:-.02em;text-wrap:balance;margin:0}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--brand);color:#04201e;font-family:var(--f-d);font-weight:800;font-size:18px;
-  padding:16px 26px;border-radius:12px;text-decoration:none;box-shadow:0 10px 30px rgba(143,240,226,.25);transition:transform .15s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--brand);color:#fff;font-family:var(--f-d);font-weight:800;font-size:18px;
+  padding:16px 26px;border-radius:12px;text-decoration:none;box-shadow:0 10px 30px rgba(255,106,43,.25);transition:transform .15s}
 .btn:hover{transform:translateY(-2px)}
 .btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .note{color:var(--muted);font-size:14.5px}
 /* topo */
-.hero{background:radial-gradient(120% 90% at 75% 40%,#0f6b64 0%,#073f3b 45%,var(--bg) 100%);padding-block:22px 56px;position:relative;overflow:hidden}
+.hero{background:radial-gradient(120% 90% at 75% 40%,#4a1d08 0%,#1f120a 45%,var(--bg) 100%);padding-block:22px 56px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-140px;height:320px;transform:perspective(600px) rotateX(68deg);transform-origin:50% 100%;
-  background-image:linear-gradient(rgba(143,240,226,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(143,240,226,.18) 1px,transparent 1px);background-size:44px 44px;
+  background-image:linear-gradient(rgba(255,106,43,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(255,106,43,.18) 1px,transparent 1px);background-size:44px 44px;
   -webkit-mask-image:linear-gradient(to top,#000,transparent 85%);mask-image:linear-gradient(to top,#000,transparent 85%);pointer-events:none}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--f-d);font-weight:800;font-size:19px}
@@ -42,28 +42,28 @@ h1,h2,h3{font-family:var(--f-d);letter-spacing:-.02em;text-wrap:balance;margin:0
 .bar a.ja{font-size:14.5px;color:var(--muted);text-decoration:none}
 .hgrid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px;align-items:center;margin-top:44px;position:relative;z-index:1}
 @media (max-width:880px){.hgrid{grid-template-columns:minmax(0,1fr);margin-top:28px}}
-.eyebrow{display:inline-block;font:700 12.5px var(--f-m);letter-spacing:.06em;text-transform:uppercase;color:var(--brand);border:1px solid rgba(143,240,226,.5);border-radius:999px;padding:5px 12px}
+.eyebrow{display:inline-block;font:700 12.5px var(--f-m);letter-spacing:.06em;text-transform:uppercase;color:var(--brand);border:1px solid rgba(255,106,43,.5);border-radius:999px;padding:5px 12px}
 .hero h1{font-size:clamp(32px,4.6vw,52px);line-height:1.06;margin-top:16px}
 .hero h1 span{color:var(--brand)}
-.hero p.lead{font-size:19px;color:#cfe7e3;margin:16px 0 26px;max-width:56ch}
+.hero p.lead{font-size:19px;color:#eadbd2;margin:16px 0 26px;max-width:56ch}
 .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
-.hero img{width:100%;max-width:520px;border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(143,240,226,.25);justify-self:center;transform:perspective(1200px) rotateY(-8deg) rotateX(3deg)}
+.hero img{width:100%;max-width:520px;border-radius:18px;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 0 1px rgba(255,106,43,.25);justify-self:center;transform:perspective(1200px) rotateY(-8deg) rotateX(3deg)}
 section{padding-block:64px}
 section h2{font-size:clamp(26px,3.4vw,38px);line-height:1.12}
 section p.sub{color:var(--muted);margin:10px 0 0;max-width:62ch}
 /* simulador */
-.sim{background:linear-gradient(180deg,var(--bg) 0%,#062c29 100%)}
+.sim{background:linear-gradient(180deg,var(--bg) 0%,#140f0c 100%)}
 .simbox{margin-top:28px;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:22px}
 @media (max-width:880px){.simbox{grid-template-columns:minmax(0,1fr)}}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
 .panel label{display:block;font-weight:700;font-size:15px;margin-bottom:8px}
 .money{position:relative}
 .money span{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-family:var(--f-m);color:var(--muted)}
-.money input{width:100%;font:700 24px var(--f-m);color:var(--ink);background:#062724;border:1.5px solid var(--brand);border-radius:12px;padding:14px 14px 14px 52px}
+.money input{width:100%;font:700 24px var(--f-m);color:var(--ink);background:#100c0a;border:1.5px solid var(--brand);border-radius:12px;padding:14px 14px 14px 52px}
 .money input:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 .seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:6px}
-.seg button{font:700 14px var(--f-b);color:var(--muted);background:#062724;border:1px solid var(--line);border-radius:10px;padding:10px 4px;cursor:pointer}
-.seg button[aria-pressed="true"]{background:var(--brand);color:#04201e;border-color:var(--brand)}
+.seg button{font:700 14px var(--f-b);color:var(--muted);background:#100c0a;border:1px solid var(--line);border-radius:10px;padding:10px 4px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--brand);color:#fff;border-color:var(--brand)}
 .seg button:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
 .f{margin-top:18px}
 .big{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
@@ -74,8 +74,8 @@ section p.sub{color:var(--muted);margin:10px 0 0;max-width:62ch}
 .col{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:6px;min-width:0}
 .col .v{font:700 12px var(--f-m);white-space:nowrap}
 .col .v.up{color:var(--up)}.col .v.down{color:var(--down)}
-.col .b{width:100%;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,rgba(143,240,226,.55),rgba(143,240,226,.15));transition:height .35s}
-.col.last .b{background:linear-gradient(180deg,#8ff0e2,#3fb9a9);box-shadow:0 0 24px rgba(143,240,226,.45)}
+.col .b{width:100%;border-radius:8px 8px 3px 3px;background:linear-gradient(180deg,rgba(255,106,43,.55),rgba(255,106,43,.15));transition:height .35s}
+.col.last .b{background:linear-gradient(180deg,#ff8a4c,#c2410c);box-shadow:0 0 24px rgba(255,106,43,.45)}
 .col .y{font:600 12.5px var(--f-m);color:var(--muted)}
 .rows{margin-top:14px;display:grid;gap:6px;font-family:var(--f-m);font-size:14px}
 .rows div{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding:4px 0}
@@ -93,9 +93,9 @@ section p.sub{color:var(--muted);margin:10px 0 0;max-width:62ch}
 /* preço */
 .price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:30px;align-items:center}
 @media (max-width:880px){.price{grid-template-columns:minmax(0,1fr)}}
-.pcard{background:linear-gradient(160deg,#0f6b64,#073f3b);border:1px solid rgba(143,240,226,.5);border-radius:20px;padding:28px;box-shadow:0 0 40px rgba(143,240,226,.18)}
+.pcard{background:linear-gradient(160deg,#4a1d08,#1f120a);border:1px solid rgba(255,106,43,.5);border-radius:20px;padding:28px;box-shadow:0 0 40px rgba(255,106,43,.18)}
 .pcard .val{font:800 52px var(--f-d);letter-spacing:-.03em}
-.pcard .val small{font-size:20px;font-weight:700;color:#cfe7e3}
+.pcard .val small{font-size:20px;font-weight:700;color:#eadbd2}
 .pcard ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:8px}
 .pcard li::before{content:"✓ ";color:var(--brand);font-weight:800}
 .pcard .btn{width:100%}
@@ -105,21 +105,21 @@ details summary{cursor:pointer;font-family:var(--f-d);font-weight:700;font-size:
 details summary::-webkit-details-marker{display:none}
 details summary::after{content:"+";color:var(--brand);font-family:var(--f-m)}
 details[open] summary::after{content:"−"}
-details p{margin:10px 0 0;color:#cfe7e3;max-width:72ch}
+details p{margin:10px 0 0;color:#eadbd2;max-width:72ch}
 summary:focus-visible{outline:3px solid var(--brand);outline-offset:4px}
 footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
 .sticky{position:fixed;left:0;right:0;bottom:0;padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));
-  background:rgba(4,32,30,.94);border-top:1px solid var(--line);display:none;z-index:5}
+  background:rgba(11,11,11,.94);border-top:1px solid var(--line);display:none;z-index:5}
 .sticky .btn{width:100%;padding:13px;font-size:16.5px}
 @media (max-width:700px){.sticky{display:block}body{padding-bottom:76px}}
 /* faixa de prazo: a CBS começa em 01/01/2027 */
-.prazo{background:linear-gradient(90deg,#ffb020,#ffd166);color:#1a1200;font:700 15px var(--f-b);text-align:center;padding-block:9px}
+.prazo{background:linear-gradient(90deg,#f04e23,#ff8a4c);color:#fff;font:700 15px var(--f-b);text-align:center;padding-block:9px}
 .prazo b{font-weight:800}
 /* brilho que passa no botão de compra */
 .btn{position:relative;overflow:hidden}
 .btn::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);animation:brilho 3.2s ease-in-out infinite}
 @keyframes brilho{0%,55%{left:-60%}100%{left:130%}}
-.selos{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:16px;font-size:14px;color:#cfe7e3}
+.selos{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:16px;font-size:14px;color:#eadbd2}
 .selos span::before{content:"✓ ";color:var(--brand);font-weight:800}
 @media (prefers-reduced-motion:reduce){.btn::after{animation:none;display:none}}
 </style>
@@ -138,7 +138,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
         <span class="note">Pagamento único · sem mensalidade</span></div>
       <div class="selos"><span>Acesso na hora</span><span>Sempre atualizada</span><span>Garantia de 7 dias</span><span>Pagamento seguro Hotmart</span></div>
     </div>
-    <img src="../img/capa.jpg" alt="A calculadora Recompõe 2033 no notebook e no celular, com o preço da proposta ano a ano até 2033" width="1200" height="1200">
+    <img src="../video/calc-1x1.jpg" alt="A calculadora Recompõe 2033 no notebook e no celular, com o preço da proposta ano a ano até 2033" width="1200" height="1200">
   </div>
 </div></header>
 
@@ -180,7 +180,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
   <div class="who" aria-label="Para quem é"><span>Fornecedores do governo</span><span>Assessorias de licitação</span><span>Analistas de licitação</span><span>Advogados</span><span>Contadores</span></div>
 </div></section>
 
-<section class="gut" style="background:#062c29"><div class="in price">
+<section class="gut" style="background:#140f0c"><div class="in price">
   <div>
     <h2>Uma compra, sempre atualizada</h2>
     <p class="sub">Sem mensalidade. Você compra uma vez e usa no computador e no celular, pelo navegador, sem instalar nada. A calculadora é sempre atualizada: quando o Senado fixar as alíquotas, o governo publicar o redutor de compras públicas ou sair qualquer mudança nas regras da reforma, a atualização entra automaticamente, sem custo extra. Você só abre e usa a versão mais nova.</p>
@@ -188,7 +188,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
   </div>
   <div class="pcard">
     <div class="val">R$ 37 <small>pagamento único</small></div>
-    <div class="note" style="color:#cfe7e3">ou parcelado no cartão · Pix · boleto</div>
+    <div class="note" style="color:#eadbd2">ou parcelado no cartão · Pix · boleto</div>
     <ul><li>Preço da proposta e reequilíbrio</li><li>Redutores por área e do governo</li><li>Minuta do pedido e nota da proposta</li><li>Cálculos salvos e relatório</li><li>Atualizações sempre incluídas, sem custo</li><li>Garantia de 7 dias pelo Hotmart</li></ul>
     <a class="btn" href="https://pay.hotmart.com/B108084005G">Comprar agora</a>
   </div>
