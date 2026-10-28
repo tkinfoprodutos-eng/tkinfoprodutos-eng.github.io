@@ -136,7 +136,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
       <p class="lead">Em janeiro de 2027 a reforma tributária começa a cobrar: a CBS entra no preço e a carga muda todo ano até 2033. Quem ganha um pregão agora executa o contrato já com ela. A Recompõe 2033 calcula o preço da sua proposta e o reequilíbrio dos contratos que você já tem, ano a ano, com a minuta pronta para pedir.</p>
       <div class="cta-row"><a class="btn" href="https://pay.hotmart.com/B108084005G">Quero a calculadora · R$ 37</a>
         <span class="note">Pagamento único · sem mensalidade</span></div>
-      <div class="selos"><span>Acesso na hora</span><span>Sempre atualizada</span><span>Garantia de 7 dias</span><span>Pagamento seguro Hotmart</span></div>
+      <div class="selos"><span>Já com os números do TCU de 28/10/2026</span><span>Acesso na hora</span><span>Sempre atualizada</span><span>Garantia de 7 dias</span><span>Pagamento seguro Hotmart</span></div>
     </div>
     <img src="../video/calc-1x1-v2.jpg" alt="A calculadora Recompõe 2033 no notebook e no celular, com o preço da proposta ano a ano até 2033" width="1200" height="1200">
   </div>
@@ -162,7 +162,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
       <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b style="font-family:var(--f-d)">Valor mensal que mantém a sua margem</b><span class="note">2026 = hoje</span></div>
       <div class="chart" id="chart" role="img" aria-label="Variação do valor mensal por ano"></div>
       <div class="rows" id="rows"></div>
-      <p class="cenario" id="cen">Cenário de exemplo: serviço prestado a órgão público, 55% de mão de obra e 20% de compras com crédito, CBS e IBS de referência de 27,91%, ISS sobre o valor com CBS e IBS e sem o redutor de compras governamentais. Na calculadora completa você ajusta cada um desses pontos, escolhe a área de atuação e calcula também o preço para licitação.</p>
+      <p class="cenario" id="cen">Cenário de exemplo: serviço prestado a órgão público, 55% de mão de obra e 20% de compras com crédito, CBS de 11,3% e redutor de compras governamentais de 44,16% na CBS (cálculo do TCU de 28/10/2026), IBS de 18,7% sem redutor e ISS sobre o valor com CBS e IBS. Na calculadora completa você ajusta cada um desses pontos, escolhe a área de atuação e calcula também o preço para licitação.</p>
     </div>
   </div>
 </div></section>
@@ -200,7 +200,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
     <details><summary>Como recebo o acesso?</summary><p>Logo depois da confirmação do pagamento. Você entra em tkinfoprodutos-eng.github.io com o e-mail da compra e o código da transação (começa com HP), que está no e-mail do Hotmart.</p></details>
     <details><summary>Serve para quem ainda não tem contrato?</summary><p>Sim. O modo Preço para licitação monta o valor da proposta a partir dos custos e da margem, ano a ano, e mostra a margem que o seu preço deixa em cada ano da execução.</p></details>
     <details><summary>A calculadora é atualizada?</summary><p>Sim, sempre. Quando saírem as alíquotas oficiais, o percentual do redutor de compras governamentais ou novas regras da reforma, a calculadora é atualizada sem custo e sem você precisar fazer nada: basta entrar de novo que a versão nova já aparece.</p></details>
-    <details><summary>As alíquotas ainda não foram definidas. O cálculo serve?</summary><p>Serve para planejar e negociar. A calculadora vem com as alíquotas de referência usadas no mercado (27,91% e 26,5%), você pode trocar a qualquer momento e, quando saírem os valores oficiais, eles entram na atualização. O redutor de compras governamentais é uma régua que você ajusta.</p></details>
+    <details><summary>As alíquotas ainda não foram definidas. O cálculo serve?</summary><p>Serve para planejar e negociar. A calculadora já vem com os números aprovados pelo TCU em 28/10/2026 (CBS de 11,3% e redutor de 44,16% nas vendas ao governo), que o Senado confirma até 15/12. Você pode trocar a qualquer momento e, quando saírem os valores definitivos, eles entram na atualização. O redutor de compras governamentais é uma régua que você ajusta.</p></details>
     <details><summary>Funciona para o Simples Nacional?</summary><p>Sim. No Simples, a calculadora considera a alíquota efetiva do DAS e o efeito da reforma nas compras, que passam a ter CBS e IBS sem crédito.</p></details>
     <details><summary>Substitui o contador?</summary><p>Não. É uma estimativa técnica para planejamento e para embasar pedidos, com base na Lei Complementar 214/2025. Confirme o enquadramento da sua empresa com o contador.</p></details>
     <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Peça o reembolso pelo Hotmart e o valor volta integralmente.</p></details>
@@ -216,7 +216,7 @@ footer{padding-block:34px 44px;border-top:1px solid var(--line);color:var(--mute
 
 <script>
 // Fatores por ano (valor devido ÷ valor de hoje), calculados com o motor da Recompõe 2033 no cenário de exemplo descrito na página
-const F={presumido:[1,1.041307,1.041307,1.052421,1.063392,1.074223,1.084917,1.146329],real:[1,0.998198,0.998198,1.008803,1.019271,1.029604,1.039805,1.098363],simples:[1,1.010158,1.010158,1.012836,1.015525,1.018225,1.020937,1.037435]};
+const F={presumido:[1,1.014076,1.014076,1.024944,1.036088,1.047091,1.057954,1.120339],real:[1,0.972094,0.972094,0.982465,0.9931,1.003599,1.013963,1.07346],simples:[1,1.014401,1.014401,1.017078,1.019767,1.022468,1.02518,1.041678]};
 const Y=[2026,2027,2028,2029,2030,2031,2032,2033];
 const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:2,maximumFractionDigits:2});
 const pct=v=>(v>0?'+':'')+(v*100).toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1})+'%';
